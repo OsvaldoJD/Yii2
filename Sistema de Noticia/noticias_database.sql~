@@ -1,0 +1,91 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.11
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Dec 30, 2014 at 05:48 
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `noticias_database`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categorias`
+--
+
+CREATE TABLE IF NOT EXISTS `categorias` (
+`id` int(11) NOT NULL,
+  `categoria` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `noticias`
+--
+
+CREATE TABLE IF NOT EXISTS `noticias` (
+`id` int(11) NOT NULL,
+  `titulo` varchar(300) NOT NULL,
+  `conteudo` text NOT NULL,
+  `data` datetime NOT NULL,
+  `imagem` varchar(300) NOT NULL,
+  `categoria` varchar(300) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `noticias`
+--
+
+INSERT INTO `noticias` (`id`, `titulo`, `conteudo`, `data`, `imagem`, `categoria`) VALUES
+(28, 'sssqqww', 'aqwww', '2014-12-30 01:34:32', 'GW_UPLOADPATH', 'destaque'),
+(29, 'Sesi-SP vence Rio do Sul e fecha o', 'aaaqqqqq', '2014-12-30 01:36:08', 'imagens/10846147_1577658905797582_889829668089072566_n.jpg', 'destaque'),
+(30, 'qqqqq', 'sawswqqq', '2014-12-30 01:36:50', 'imagens/141991421010846147_1577658905797582_889829668089072566_n.jpg', 'destaque'),
+(31, 'sssssssqqqq', 'qqqqqzzzxswww', '2014-12-30 01:37:31', 'imagens/1419914251_10846147_1577658905797582_889829668089072566_n.jpg', 'destaque');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `categorias`
+--
+ALTER TABLE `categorias`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `noticias`
+--
+ALTER TABLE `noticias`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `categorias`
+--
+ALTER TABLE `categorias`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `noticias`
+--
+ALTER TABLE `noticias`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
